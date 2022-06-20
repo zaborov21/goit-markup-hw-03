@@ -11,8 +11,8 @@ medium-500, black-900, bolt-700, regular-400,
 */
 
 :root {
-  --main-font: 'Roboto';
-  --secondary-font: 'Raleway';
+  --main-font: "Roboto";
+  --secondary-font: "Raleway";
   --primary-text-color: #212121;
   --accent-color: #2196f3;
   --description-color: #757575;
@@ -21,8 +21,8 @@ medium-500, black-900, bolt-700, regular-400,
   --card-set-gap: 30px;
 
   /* others */
---items: 3;
---indent: 30px;
+  --items: 3;
+  --indent: 30px;
 }
 
 body {
@@ -67,7 +67,9 @@ p {
   max-width: 100%;
   height: auto;
 }
-
+address{
+  font-style: normal;
+}
 
 /**
   |============================
@@ -75,16 +77,15 @@ p {
   |============================
 */
 .card-set {
-	display: flex;
-	flex-wrap: wrap;
-	margin: calc(-1 * var(--indent) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--indent) / 2);
 }
 
 .card-set-item {
-	flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
-	margin: calc(var(--indent) / 2);
+  flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+  margin: calc(var(--indent) / 2);
 }
-
 
 /* Section */
 
@@ -101,7 +102,6 @@ p {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid tomato; */
 }
 
 /* (header) index.html and portfolio.html */
@@ -156,9 +156,6 @@ p {
 }
 .address-list-item + .address-list-item {
   margin-top: 9px;
-}
-.page-address {
-  font-style: normal;
 }
 .footer-email:hover,
 .footer-tel:hover,
@@ -242,14 +239,13 @@ p {
 /* section hero */
 
 .hero {
-  background-color: #2f303a;
-}
-.hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
 
   text-align: center;
+  background-color: #2f303a;
 }
+
 .hero .title {
   margin-bottom: 30px;
   margin-left: auto;
@@ -279,7 +275,7 @@ p {
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -289,7 +285,7 @@ p {
 /* section advantages */
 
 .advantages-list {
- --items: 4;
+  --items: 4;
 }
 .advantages .subtitle {
   margin-bottom: 10px;
@@ -309,35 +305,30 @@ p {
 .work.section {
   padding-top: 0;
 }
-.work-container {
-  text-align: center;
-}
 .work .title {
   margin-bottom: 50px;
 
   color: var(--primary-text-color);
 
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
 }
 .work-list {
-  --items:3;
+  --items: 3;
 }
 
 /* section team */
 
-.team-container {
-  text-align: center;
-}
 .team {
   background-color: #f5f4fa;
 }
 .team-list {
- --items:4;
+  --items: 4;
 }
-.team-list-item .img {
-  margin-bottom: 30px;
+.team-descr {
+  padding: 30px 0;
 }
 .team-list-item {
   background-color: var(--primary-white-color);
@@ -351,6 +342,7 @@ p {
 
   color: var(--primary-text-color);
 
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -366,8 +358,6 @@ p {
   text-align: center;
 }
 .team-job-descr {
-  margin-bottom: 30px;
-
   color: var(--description-color);
 
   font-size: 16px;
@@ -384,10 +374,9 @@ p {
 }
 .button-list {
   display: flex;
+  justify-content: center;
 
   margin-bottom: 50px;
-
-  justify-content: center;
 }
 .button-list-item + .button-list-item {
   margin-left: 8px;
@@ -403,9 +392,9 @@ p {
   line-height: 1.62;
   letter-spacing: inherit;
 
-  background: #f5f4fa;
+  background: var(--filtr-button-color);
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
   cursor: pointer;
 }
 .btn:hover,
@@ -420,9 +409,6 @@ p {
 
 /* portfolio section */
 
-.portfolio-list-item {
-  background-color: var(--primary-white-color);
-}
 .portfolio-item-border {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
